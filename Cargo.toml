@@ -1,0 +1,32 @@
+[package]
+name = "azure-sdk-rust"
+version = "0.1.1"
+authors = ["Chris Jones"]
+license = "Apache-2.0"
+readme = "README.md"
+keywords = ["aws", "s3"]
+repository = "https://github.com/lambdastackio/azure-sdk-rust"
+homepage = "https://github.com/lambdastackio/azure-sdk-rust"
+documentation = "https://lambdastackio.github.io/azure-sdk-rust/azure_sdk_rust/azure"
+description = """
+**Under very heavy development** It will most likely break!
+Microsoft Azure SDK for Rust. Originally designed to stay as close as possible to aws-sdk-rust but design decision
+changed to make it Azure specific. An abstract library will be used to manage the differences between the two for those
+needing cross cloud access.
+"""
+
+[dependencies]
+chrono = "0"
+rust-crypto = "0"
+rustc-serialize = "0"
+RustyXML = "0"
+mime = "0"
+log = "0"
+env_logger = "0"
+uuid = "0"
+time = "0"
+url = "0"
+
+[dependencies.hyper]
+version = "0"
+default-features = true

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AzureError` enum in crate `azure_sdk_rust`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AzureError">
+
+    <title>azure_sdk_rust::azure::core::errors::AzureError - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>azure_sdk_rust</a>::<wbr><a href='../../index.html'>azure</a>::<wbr><a href='../index.html'>core</a>::<wbr><a href='index.html'>errors</a></p><script>window.sidebarCurrent = {name: 'AzureError', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../index.html'>azure_sdk_rust</a>::<wbr><a href='../../index.html'>azure</a>::<wbr><a href='../index.html'>core</a>::<wbr><a href='index.html'>errors</a>::<wbr><a class='enum' href=''>AzureError</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-748' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#31-44' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum AzureError {
+    HyperError(<a class='enum' href='https://hyperium.github.io/hyper/hyper/error/enum.Error.html' title='hyper::error::Error'>Error</a>),
+    IOError(<a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>IOError</a>),
+    XMLError(XMLError),
+    UnexpectedHTTPResult(<a class='struct' href='../../../../azure_sdk_rust/azure/core/errors/struct.UnexpectedHTTPResult.html' title='azure_sdk_rust::azure::core::errors::UnexpectedHTTPResult'>UnexpectedHTTPResult</a>),
+    HeaderNotFound(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    ResponseParsingError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.TraversingError.html' title='azure_sdk_rust::azure::core::errors::TraversingError'>TraversingError</a>),
+    ParseIntError(<a class='struct' href='https://doc.rust-lang.org/nightly/core/num/struct.ParseIntError.html' title='core::num::ParseIntError'>ParseIntError</a>),
+    ParseError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/range/enum.ParseError.html' title='azure_sdk_rust::azure::core::range::ParseError'>ParseError</a>),
+    GenericError,
+    ParsingError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/enumerations/enum.ParsingError.html' title='azure_sdk_rust::azure::core::enumerations::ParsingError'>ParsingError</a>),
+    InputParametersError(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    URLParseError(URLParseError),
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.HyperError' class='variant'><span id='HyperError.v' class='invisible'><code>HyperError(<a class='enum' href='https://hyperium.github.io/hyper/hyper/error/enum.Error.html' title='hyper::error::Error'>Error</a>)</code></span></span><span id='variant.IOError' class='variant'><span id='IOError.v' class='invisible'><code>IOError(<a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>IOError</a>)</code></span></span><span id='variant.XMLError' class='variant'><span id='XMLError.v' class='invisible'><code>XMLError(XMLError)</code></span></span><span id='variant.UnexpectedHTTPResult' class='variant'><span id='UnexpectedHTTPResult.v' class='invisible'><code>UnexpectedHTTPResult(<a class='struct' href='../../../../azure_sdk_rust/azure/core/errors/struct.UnexpectedHTTPResult.html' title='azure_sdk_rust::azure::core::errors::UnexpectedHTTPResult'>UnexpectedHTTPResult</a>)</code></span></span><span id='variant.HeaderNotFound' class='variant'><span id='HeaderNotFound.v' class='invisible'><code>HeaderNotFound(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>)</code></span></span><span id='variant.ResponseParsingError' class='variant'><span id='ResponseParsingError.v' class='invisible'><code>ResponseParsingError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.TraversingError.html' title='azure_sdk_rust::azure::core::errors::TraversingError'>TraversingError</a>)</code></span></span><span id='variant.ParseIntError' class='variant'><span id='ParseIntError.v' class='invisible'><code>ParseIntError(<a class='struct' href='https://doc.rust-lang.org/nightly/core/num/struct.ParseIntError.html' title='core::num::ParseIntError'>ParseIntError</a>)</code></span></span><span id='variant.ParseError' class='variant'><span id='ParseError.v' class='invisible'><code>ParseError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/range/enum.ParseError.html' title='azure_sdk_rust::azure::core::range::ParseError'>ParseError</a>)</code></span></span><span id='variant.GenericError' class='variant'><span id='GenericError.v' class='invisible'><code>GenericError</code></span></span><span id='variant.ParsingError' class='variant'><span id='ParsingError.v' class='invisible'><code>ParsingError(<a class='enum' href='../../../../azure_sdk_rust/azure/core/enumerations/enum.ParsingError.html' title='azure_sdk_rust::azure::core::enumerations::ParsingError'>ParsingError</a>)</code></span></span><span id='variant.InputParametersError' class='variant'><span id='InputParametersError.v' class='invisible'><code>InputParametersError(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>)</code></span></span><span id='variant.URLParseError' class='variant'><span id='URLParseError.v' class='invisible'><code>URLParseError(URLParseError)</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-772' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#30' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;URLParseError&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-48' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#58-62' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class='method'><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(upe: URLParseError) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/core/range/enum.ParseError.html' title='azure_sdk_rust::azure::core::range::ParseError'>ParseError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-51' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#64-68' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class='method'><span id='from.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(pe: <a class='enum' href='../../../../azure_sdk_rust/azure/core/range/enum.ParseError.html' title='azure_sdk_rust::azure::core::range::ParseError'>ParseError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-54' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#70-74' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class='method'><span id='from.v-2' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(_: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='https://hyperium.github.io/hyper/hyper/error/enum.Error.html' title='hyper::error::Error'>Error</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-56' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#76-80' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-3' class='method'><span id='from.v-3' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(he: <a class='enum' href='https://hyperium.github.io/hyper/hyper/error/enum.Error.html' title='hyper::error::Error'>Error</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/core/enumerations/enum.ParsingError.html' title='azure_sdk_rust::azure::core::enumerations::ParsingError'>ParsingError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-59' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#82-86' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-4' class='method'><span id='from.v-4' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(pie: <a class='enum' href='../../../../azure_sdk_rust/azure/core/enumerations/enum.ParsingError.html' title='azure_sdk_rust::azure::core::enumerations::ParsingError'>ParsingError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;XMLError&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-62' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#88-92' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-5' class='method'><span id='from.v-5' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(xmle: XMLError) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>IOError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-65' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#94-98' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-6' class='method'><span id='from.v-6' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(ioe: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>IOError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/format/struct.ParseError.html' title='chrono::format::ParseError'>ParseError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-68' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#100-104' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-7' class='method'><span id='from.v-7' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(pe: <a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/format/struct.ParseError.html' title='chrono::format::ParseError'>ParseError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.TraversingError.html' title='azure_sdk_rust::azure::core::errors::TraversingError'>TraversingError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-71' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#106-110' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-8' class='method'><span id='from.v-8' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(te: <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.TraversingError.html' title='azure_sdk_rust::azure::core::errors::TraversingError'>TraversingError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/core/num/struct.ParseIntError.html' title='core::num::ParseIntError'>ParseIntError</a>&gt; for <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-74' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/core/errors.rs.html#112-116' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-9' class='method'><span id='from.v-9' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(pie: <a class='struct' href='https://doc.rust-lang.org/nightly/core/num/struct.ParseIntError.html' title='core::num::ParseIntError'>ParseIntError</a>) -&gt; <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "azure_sdk_rust";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

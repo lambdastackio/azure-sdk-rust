@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Blob` struct in crate `azure_sdk_rust`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Blob">
+
+    <title>azure_sdk_rust::azure::storage::blob::Blob - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>azure_sdk_rust</a>::<wbr><a href='../../index.html'>azure</a>::<wbr><a href='../index.html'>storage</a>::<wbr><a href='index.html'>blob</a></p><script>window.sidebarCurrent = {name: 'Blob', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>azure_sdk_rust</a>::<wbr><a href='../../index.html'>azure</a>::<wbr><a href='../index.html'>storage</a>::<wbr><a href='index.html'>blob</a>::<wbr><a class='struct' href=''>Blob</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2898' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/storage/blob/mod.rs.html#78-101' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Blob {
+    pub name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub container_name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub snapshot_time: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;&gt;,
+    pub last_modified: <a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;,
+    pub etag: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub content_length: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub content_type: <a class='struct' href='https://hyperium.github.io/mime.rs/mime/struct.Mime.html' title='mime::Mime'>Mime</a>,
+    pub content_encoding: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub content_language: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub content_md5: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub cache_control: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub x_ms_blob_sequence_number: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>&gt;,
+    pub blob_type: <a class='enum' href='../../../../azure_sdk_rust/azure/storage/blob/enum.BlobType.html' title='azure_sdk_rust::azure::storage::blob::BlobType'>BlobType</a>,
+    pub lease_status: <a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseStatus.html' title='azure_sdk_rust::azure::core::lease::LeaseStatus'>LeaseStatus</a>,
+    pub lease_state: <a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseState.html' title='azure_sdk_rust::azure::core::lease::LeaseState'>LeaseState</a>,
+    pub lease_duration: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseDuration.html' title='azure_sdk_rust::azure::core::lease::LeaseDuration'>LeaseDuration</a>&gt;,
+    pub copy_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub copy_status: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/storage/blob/enum.CopyStatus.html' title='azure_sdk_rust::azure::storage::blob::CopyStatus'>CopyStatus</a>&gt;,
+    pub copy_source: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub copy_progress: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/core/range/struct.Range.html' title='azure_sdk_rust::azure::core::range::Range'>Range</a>&gt;,
+    pub copy_completion: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;&gt;,
+    pub copy_status_description: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.name' class='structfield'>
+                           <span id='name.v' class='invisible'>
+                           <code>name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.container_name' class='structfield'>
+                           <span id='container_name.v' class='invisible'>
+                           <code>container_name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.snapshot_time' class='structfield'>
+                           <span id='snapshot_time.v' class='invisible'>
+                           <code>snapshot_time: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.last_modified' class='structfield'>
+                           <span id='last_modified.v' class='invisible'>
+                           <code>last_modified: <a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.etag' class='structfield'>
+                           <span id='etag.v' class='invisible'>
+                           <code>etag: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.content_length' class='structfield'>
+                           <span id='content_length.v' class='invisible'>
+                           <code>content_length: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.content_type' class='structfield'>
+                           <span id='content_type.v' class='invisible'>
+                           <code>content_type: <a class='struct' href='https://hyperium.github.io/mime.rs/mime/struct.Mime.html' title='mime::Mime'>Mime</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.content_encoding' class='structfield'>
+                           <span id='content_encoding.v' class='invisible'>
+                           <code>content_encoding: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.content_language' class='structfield'>
+                           <span id='content_language.v' class='invisible'>
+                           <code>content_language: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.content_md5' class='structfield'>
+                           <span id='content_md5.v' class='invisible'>
+                           <code>content_md5: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.cache_control' class='structfield'>
+                           <span id='cache_control.v' class='invisible'>
+                           <code>cache_control: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.x_ms_blob_sequence_number' class='structfield'>
+                           <span id='x_ms_blob_sequence_number.v' class='invisible'>
+                           <code>x_ms_blob_sequence_number: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.blob_type' class='structfield'>
+                           <span id='blob_type.v' class='invisible'>
+                           <code>blob_type: <a class='enum' href='../../../../azure_sdk_rust/azure/storage/blob/enum.BlobType.html' title='azure_sdk_rust::azure::storage::blob::BlobType'>BlobType</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.lease_status' class='structfield'>
+                           <span id='lease_status.v' class='invisible'>
+                           <code>lease_status: <a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseStatus.html' title='azure_sdk_rust::azure::core::lease::LeaseStatus'>LeaseStatus</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.lease_state' class='structfield'>
+                           <span id='lease_state.v' class='invisible'>
+                           <code>lease_state: <a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseState.html' title='azure_sdk_rust::azure::core::lease::LeaseState'>LeaseState</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.lease_duration' class='structfield'>
+                           <span id='lease_duration.v' class='invisible'>
+                           <code>lease_duration: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseDuration.html' title='azure_sdk_rust::azure::core::lease::LeaseDuration'>LeaseDuration</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_id' class='structfield'>
+                           <span id='copy_id.v' class='invisible'>
+                           <code>copy_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_status' class='structfield'>
+                           <span id='copy_status.v' class='invisible'>
+                           <code>copy_status: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../../../azure_sdk_rust/azure/storage/blob/enum.CopyStatus.html' title='azure_sdk_rust::azure::storage::blob::CopyStatus'>CopyStatus</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_source' class='structfield'>
+                           <span id='copy_source.v' class='invisible'>
+                           <code>copy_source: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_progress' class='structfield'>
+                           <span id='copy_progress.v' class='invisible'>
+                           <code>copy_progress: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/core/range/struct.Range.html' title='azure_sdk_rust::azure::core::range::Range'>Range</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_completion' class='structfield'>
+                           <span id='copy_completion.v' class='invisible'>
+                           <code>copy_completion: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.copy_status_description' class='structfield'>
+                           <span id='copy_status_description.v' class='invisible'>
+                           <code>copy_status_description: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code>
+                           </span></span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-475' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/storage/blob/mod.rs.html#103-660' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.parse' class='method'><span id='parse.v' class='invisible'><code>fn <a href='#method.parse' class='fnname'>parse</a>(elem: &amp;Element, container_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.from_headers' class='method'><span id='from_headers.v' class='invisible'><code>fn <a href='#method.from_headers' class='fnname'>from_headers</a>(blob_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; container_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; h: &amp;<a class='struct' href='https://hyperium.github.io/hyper/hyper/header/struct.Headers.html' title='hyper::header::Headers'>Headers</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.list' class='method'><span id='list.v' class='invisible'><code>fn <a href='#method.list' class='fnname'>list</a>(c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; container_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lbo: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.ListBlobOptions.html' title='azure_sdk_rust::azure::storage::blob::ListBlobOptions'>ListBlobOptions</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/core/incompletevector/struct.IncompleteVector.html' title='azure_sdk_rust::azure::core::incompletevector::IncompleteVector'>IncompleteVector</a>&lt;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a>&gt;, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.get' class='method'><span id='get.v' class='invisible'><code>fn <a href='#method.get' class='fnname'>get</a>(c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; container_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blob_name: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snapshot: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://docs.rs/chrono/0.3.0/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; range: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../../../azure_sdk_rust/azure/core/range/struct.Range.html' title='azure_sdk_rust::azure::core::range::Range'>Range</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lease_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../../../../azure_sdk_rust/azure/core/lease/type.LeaseId.html' title='azure_sdk_rust::azure::core::lease::LeaseId'>LeaseId</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/std/io/trait.Read.html' title='std::io::Read'>Read</a>&gt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.put' class='method'><span id='put.v' class='invisible'><code>fn <a href='#method.put' class='fnname'>put</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; po: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.PutOptions.html' title='azure_sdk_rust::azure::storage::blob::PutOptions'>PutOptions</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='trait' href='https://doc.rust-lang.org/nightly/std/io/trait.Read.html' title='std::io::Read'>Read</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.lease' class='method'><span id='lease.v' class='invisible'><code>fn <a href='#method.lease' class='fnname'>lease</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; la: <a class='enum' href='../../../../azure_sdk_rust/azure/core/lease/enum.LeaseAction.html' title='azure_sdk_rust::azure::core::lease::LeaseAction'>LeaseAction</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lbo: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.LeaseBlobOptions.html' title='azure_sdk_rust::azure::storage::blob::LeaseBlobOptions'>LeaseBlobOptions</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='type' href='../../../../azure_sdk_rust/azure/core/lease/type.LeaseId.html' title='azure_sdk_rust::azure::core::lease::LeaseId'>LeaseId</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.put_page' class='method'><span id='put_page.v' class='invisible'><code>fn <a href='#method.put_page' class='fnname'>put_page</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; range: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/core/ba512_range/struct.BA512Range.html' title='azure_sdk_rust::azure::core::ba512_range::BA512Range'>BA512Range</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ppo: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.PutPageOptions.html' title='azure_sdk_rust::azure::storage::blob::PutPageOptions'>PutPageOptions</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; content: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='trait' href='https://doc.rust-lang.org/nightly/std/io/trait.Read.html' title='std::io::Read'>Read</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.put_block' class='method'><span id='put_block.v' class='invisible'><code>fn <a href='#method.put_block' class='fnname'>put_block</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; block_id: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pbo: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.PutBlockOptions.html' title='azure_sdk_rust::azure::storage::blob::PutBlockOptions'>PutBlockOptions</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; content: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='trait' href='https://doc.rust-lang.org/nightly/std/io/trait.Read.html' title='std::io::Read'>Read</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+<h4 id='method.clear_page' class='method'><span id='clear_page.v' class='invisible'><code>fn <a href='#method.clear_page' class='fnname'>clear_page</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/storage/client/struct.Client.html' title='azure_sdk_rust::azure::storage::client::Client'>Client</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; range: &amp;<a class='struct' href='../../../../azure_sdk_rust/azure/core/ba512_range/struct.BA512Range.html' title='azure_sdk_rust::azure::core::ba512_range::BA512Range'>BA512Range</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lease_id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../../../azure_sdk_rust/azure/core/lease/type.LeaseId.html' title='azure_sdk_rust::azure::core::lease::LeaseId'>LeaseId</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../../../azure_sdk_rust/azure/core/errors/enum.AzureError.html' title='azure_sdk_rust::azure::core::errors::AzureError'>AzureError</a>&gt;</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../azure_sdk_rust/azure/storage/blob/struct.Blob.html' title='azure_sdk_rust::azure::storage::blob::Blob'>Blob</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2921' class='srclink' href='../../../../src/azure_sdk_rust/src/azure/storage/blob/mod.rs.html#77' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "azure_sdk_rust";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>
