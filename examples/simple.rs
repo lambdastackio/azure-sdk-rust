@@ -13,26 +13,27 @@ extern crate mime;
 extern crate time;
 
 #[macro_use]
+extern crate azure_sdk_rust;
+
+#[macro_use]
 extern crate log;
 extern crate env_logger;
 
 extern crate uuid;
 
-use azure::core::lease::{LeaseState, LeaseStatus, LeaseAction};
-use azure::storage::client::Client;
-use azure::storage::blob::{Blob, BlobType, LIST_BLOB_OPTIONS_DEFAULT, PUT_OPTIONS_DEFAULT,
+use azure_sdk_rust::azure::core::lease::{LeaseState, LeaseStatus, LeaseAction};
+use azure_sdk_rust::azure::storage::client::Client;
+use azure_sdk_rust::azure::storage::blob::{Blob, BlobType, LIST_BLOB_OPTIONS_DEFAULT, PUT_OPTIONS_DEFAULT,
                            PUT_BLOCK_OPTIONS_DEFAULT, PUT_PAGE_OPTIONS_DEFAULT,
                            LEASE_BLOB_OPTIONS_DEFAULT};
-use azure::storage::container::{Container, PublicAccess, LIST_CONTAINER_OPTIONS_DEFAULT};
-use azure::core::ba512_range::BA512Range;
+use azure_sdk_rust::azure::storage::container::{Container, PublicAccess, LIST_CONTAINER_OPTIONS_DEFAULT};
+use azure_sdk_rust::azure::core::ba512_range::BA512Range;
 
 use std::fs;
 use time::Duration;
 
 // use azure::storage::container::PublicAccess;
 
-#[macro_use]
-pub mod azure;
 
 // use chrono::datetime::DateTime;
 use chrono::UTC;
@@ -87,7 +88,7 @@ fn main() {
         }
     };
 
-    let mut eh_client = azure::service_bus::event_hub::Client::new(&sb_namespace,
+    let mut eh_client = azure_sdk_rust::azure::service_bus::event_hub::Client::new(&sb_namespace,
                                                                    &ev_name,
                                                                    &policy_name,
                                                                    &policy_key);
@@ -201,7 +202,7 @@ fn main() {
 }
 
 #[allow(dead_code)]
-fn send_event(cli: &mut azure::service_bus::event_hub::Client) {
+fn send_event(cli: &mut azure_sdk_rust::azure::service_bus::event_hub::Client) {
     debug!("running send_event");
     let file_name = "C:\\temp\\samplein.json";
 
